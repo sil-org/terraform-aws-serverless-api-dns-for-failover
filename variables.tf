@@ -1,11 +1,11 @@
 
 variable "app_name" {
-  description = "Short name for the app (e.g. 'mfa-api'). Used as the subdomain."
+  description = "Short name for the app (e.g. 'my-api'). Used as the subdomain."
   type        = string
 }
 
 variable "cloudflare_zone_name" {
-  description = "The Cloudflare zone (aka domain) name"
+  description = "Cloudflare zone (aka domain) name"
   type        = string
 }
 
