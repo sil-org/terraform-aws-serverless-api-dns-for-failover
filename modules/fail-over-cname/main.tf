@@ -8,7 +8,7 @@ data "cloudflare_zone" "this" {
   name = var.cloudflare_zone_name
 }
 
-resource "cloudflare_record" "public-cname" {
+resource "cloudflare_record" "public_cname" {
   comment = "For easy fail over. ${local.primary_region_summary} / ${local.secondary_region_summary}"
   name    = "${var.subdomain}.${var.cloudflare_zone_name}"
   proxied = true
