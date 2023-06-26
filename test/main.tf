@@ -2,9 +2,10 @@
 module "test" {
   source = "../"
 
-  app_name             = "my-api"
+  api_name             = "my-api-dev"
   cloudflare_zone_name = "example.com"
   serverless_stage     = "dev"
+  subdomain            = "my-api"
 
   providers = {
     aws           = aws
