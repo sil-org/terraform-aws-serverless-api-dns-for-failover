@@ -13,11 +13,9 @@ data "aws_region" "secondary" {
 module "custom_domains" {
   source = "./modules/custom-domains"
 
-  # NOTE: This value needs to match the name given to the API by Serverless.
-  api_name = "${var.serverless_stage}-${var.app_name}"
-
+  api_name              = var.api_name
   api_stage             = var.serverless_stage
-  certificate_subdomain = var.app_name
+  certificate_subdomain = var.subdomain
   cloudflare_zone_name  = var.cloudflare_zone_name
 
   providers = {
@@ -34,5 +32,5 @@ module "fail_over_cname" {
   cloudflare_zone_name         = var.cloudflare_zone_name
   primary_region_domain_name   = module.custom_domains.primary_region_domain_name
   secondary_region_domain_name = module.custom_domains.secondary_region_domain_name
-  subdomain                    = var.app_name
+  subdomain                    = var.subdomain
 }

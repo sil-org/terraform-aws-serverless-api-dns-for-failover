@@ -1,6 +1,6 @@
 
-variable "app_name" {
-  description = "Short name for the app (e.g. 'my-api'). Used as the subdomain."
+variable "api_name" {
+  description = "Short name of the API (as shown in AWS API Gateway). It probably consists of your Serverless service name and stage (e.g. either 'my-api-dev' or 'dev-my-api')."
   type        = string
 }
 
@@ -38,5 +38,10 @@ variable "cloudflare_zone_name" {
 
 variable "serverless_stage" {
   description = "Short name for the stage (aka environment): 'dev' or 'prod'"
+  type        = string
+}
+
+variable "subdomain" {
+  description = "The subdomain for the CNAME record (e.g. 'my-api')"
   type        = string
 }
