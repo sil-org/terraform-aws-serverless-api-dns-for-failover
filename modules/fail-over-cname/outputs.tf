@@ -7,7 +7,7 @@ output "primary_region_summary" {
 }
 
 output "secondary_region_domain_name" {
-  value = var.primary_region_domain_name
+  value = var.secondary_region_domain_name
 }
 
 output "secondary_region_summary" {
