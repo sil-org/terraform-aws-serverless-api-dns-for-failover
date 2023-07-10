@@ -4,6 +4,12 @@ variable "api_name" {
   type        = string
 }
 
+variable "cloudflare_proxy_status" {
+  description = "Set the Cloudflare CNAME proxy status"
+  type        = bool
+  default     = true
+}
+
 variable "cloudflare_zone_name" {
   description = "Cloudflare zone (aka domain) name"
   type        = string
