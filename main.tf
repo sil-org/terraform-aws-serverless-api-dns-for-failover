@@ -29,6 +29,7 @@ module "fail_over_cname" {
 
   aws_region                   = local.aws_region
   aws_region_secondary         = local.aws_region_secondary
+  cloudflare_proxy_status      = var.cloudflare_proxy_status
   cloudflare_zone_name         = var.cloudflare_zone_name
   primary_region_domain_name   = module.custom_domains.primary_region_domain_name
   secondary_region_domain_name = module.custom_domains.secondary_region_domain_name

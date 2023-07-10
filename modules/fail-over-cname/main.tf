@@ -10,8 +10,8 @@ data "cloudflare_zone" "this" {
 
 resource "cloudflare_record" "public_cname" {
   comment = "For easy fail over. ${local.primary_region_summary} / ${local.secondary_region_summary}"
-  name    = "${var.subdomain}.${var.cloudflare_zone_name}"
-  proxied = true
+  name    = var.subdomain
+  proxied = var.cloudflare_proxy_status
   ttl     = 1 # ttl must be set to 1 when proxied is true
   type    = "CNAME"
   value   = var.primary_region_domain_name

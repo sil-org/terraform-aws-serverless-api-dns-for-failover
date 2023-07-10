@@ -26,6 +26,12 @@ variable "aws_region_secondary" {
   type        = string
 }
 
+variable "cloudflare_proxy_status" {
+  description = "Set the Cloudflare CNAME proxy status"
+  type        = bool
+  default     = true
+}
+
 variable "cloudflare_token" {
   description = "Cloudflare limited access API token"
   type        = string
