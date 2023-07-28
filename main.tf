@@ -24,8 +24,8 @@ module "custom_domains" {
   }
 }
 
-module "fail_over_cname" {
-  source = "./modules/fail-over-cname"
+module "fail_over_cnames" {
+  source = "./modules/fail-over-cnames"
 
   aws_region                   = local.aws_region
   aws_region_secondary         = local.aws_region_secondary
