@@ -31,6 +31,6 @@ variable "secondary_api_gateway_domain" {
 }
 
 variable "subdomain" {
-  description = "The subdomain for the CNAME record."
+  description = "The subdomain for the public CNAME record."
   type        = string
 }
