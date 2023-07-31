@@ -20,12 +20,12 @@ variable "cloudflare_zone_name" {
   type        = string
 }
 
-variable "primary_region_domain_name" {
+variable "primary_api_gateway_domain" {
   description = "The API Gateway primary region's endpoint domain name"
   type        = string
 }
 
-variable "secondary_region_domain_name" {
+variable "secondary_api_gateway_domain" {
   description = "The API Gateway secondary region's endpoint domain name"
   type        = string
 }

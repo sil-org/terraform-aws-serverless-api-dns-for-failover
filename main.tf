@@ -31,7 +31,7 @@ module "fail_over_cnames" {
   aws_region_secondary         = local.aws_region_secondary
   cloudflare_proxy_status      = var.cloudflare_proxy_status
   cloudflare_zone_name         = var.cloudflare_zone_name
-  primary_region_domain_name   = module.custom_domains.primary_region_domain_name
-  secondary_region_domain_name = module.custom_domains.secondary_region_domain_name
+  primary_api_gateway_domain   = module.custom_domains.primary_api_gateway_domain
+  secondary_api_gateway_domain = module.custom_domains.secondary_api_gateway_domain
   subdomain                    = var.subdomain
 }
