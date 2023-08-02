@@ -4,7 +4,8 @@ locals {
 }
 
 module "certificate" {
-  source = "github.com/silinternational/terraform-aws-acm-certificate?ref=0.2.0"
+  source  = "silinternational/acm-certificate/aws"
+  version = "0.2.1"
 
   certificate_domain_name = local.full_domain_name
   cloudflare_zone_name    = var.cloudflare_zone_name
