@@ -21,6 +21,6 @@ variable "serverless_stage" {
 }
 
 variable "subdomain" {
-  description = "The subdomain for the CNAME record (e.g. 'my-api')"
+  description = "The subdomain for the public CNAME record (e.g. 'my-api')"
   type        = string
 }
