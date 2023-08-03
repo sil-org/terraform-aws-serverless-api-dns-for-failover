@@ -26,7 +26,7 @@ resource "cloudflare_record" "public_cname" {
   proxied = var.cloudflare_proxy_status
   ttl     = 1 # ttl must be set to 1 when proxied is true
   type    = "CNAME"
-  value   = local.primary_region_subdomain # <-- This controls which region to use by default.
+  value   = local.primary_region_intermediate_domain # <-- This controls which region to use by default.
   zone_id = data.cloudflare_zone.this.id
 }
 
