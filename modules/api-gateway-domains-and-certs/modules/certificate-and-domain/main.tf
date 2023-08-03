@@ -4,8 +4,9 @@ locals {
 }
 
 module "certificate" {
-  source  = "silinternational/acm-certificate/aws"
-  version = "0.2.1"
+  source = "github.com/silinternational/terraform-aws-acm-certificate?ref=feature%2Ffix-validation-when-not-creating-dns-record"
+  #  source  = "silinternational/acm-certificate/aws"
+  #  version = "0.2.1"
 
   certificate_domain_name = local.full_domain_name
   cloudflare_zone_name    = var.cloudflare_zone_name
