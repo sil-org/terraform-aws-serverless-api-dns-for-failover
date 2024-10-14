@@ -4,11 +4,11 @@ terraform {
 
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
+      version = ">= 4"
     }
     cloudflare = {
-      source  = "cloudflare/cloudflare"
-      version = ">= 4"
+      source = "cloudflare/cloudflare"
 
       // 4.39.0 and later versions deprecated cloudflare_record.value
       // constraining to earlier versions while waiting for version 5 to mature
