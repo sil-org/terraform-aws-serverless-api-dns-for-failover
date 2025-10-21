@@ -1,6 +1,7 @@
 
 module "primary_region" {
-  source = "sil-org/serverless-api-dns-for-failover/aws//modules/api-gateway-domains-and-certs/modules/certificate-and-domain"
+  source  = "sil-org/serverless-api-dns-for-failover/aws//modules/api-gateway-domains-and-certs/modules/certificate-and-domain"
+  version = "~> 0.6.0"
 
   api_name              = var.api_name
   api_stage             = var.api_stage
@@ -12,6 +13,7 @@ module "primary_region" {
 
 module "secondary_region" {
   source     = "sil-org/serverless-api-dns-for-failover/aws//modules/api-gateway-domains-and-certs/modules/certificate-and-domain"
+  version    = "~> 0.6.0"
   depends_on = [module.primary_region]
 
   api_name              = var.api_name
