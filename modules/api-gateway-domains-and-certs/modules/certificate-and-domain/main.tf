@@ -28,11 +28,6 @@ resource "aws_acm_certificate" "this" {
   }
 }
 
-moved {
-  from = module.certificate.aws_acm_certificate.this
-  to   = aws_acm_certificate.this
-}
-
 resource "cloudflare_record" "validation" {
   count = var.create_dns_validation ? 1 : 0
 
@@ -43,16 +38,6 @@ resource "cloudflare_record" "validation" {
   proxied = false
 }
 
-moved {
-  from = module.certificate.cloudflare_record.validation
-  to   = cloudflare_record.validation
-}
-
 resource "aws_acm_certificate_validation" "this" {
   certificate_arn = aws_acm_certificate.this.arn
-}
-
-moved {
-  from = module.certificate.aws_acm_certificate_validation.this
-  to   = aws_acm_certificate_validation.this
 }
