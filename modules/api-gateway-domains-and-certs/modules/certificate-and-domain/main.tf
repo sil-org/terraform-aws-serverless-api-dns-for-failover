@@ -4,7 +4,8 @@ locals {
 }
 
 module "domain" {
-  source     = "github.com/silinternational/terraform-aws-api-gateway-custom-domain?ref=0.2.0"
+  source     = "sil-org/api-gateway-custom-domain/aws"
+  version    = "~> 0.2.0"
   depends_on = [aws_acm_certificate_validation.this]
 
   api_name        = var.api_name
