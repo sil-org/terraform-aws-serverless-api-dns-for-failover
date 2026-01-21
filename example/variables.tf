@@ -4,18 +4,6 @@ variable "api_name" {
   type        = string
 }
 
-variable "aws_access_key_id" {
-  description = "AWS Access Key ID, used for calls to both AWS regions"
-  type        = string
-  default     = null
-}
-
-variable "aws_secret_access_key" {
-  description = "AWS Secret Access Key, used for calls to both AWS regions"
-  type        = string
-  default     = null
-}
-
 variable "aws_region" {
   description = "Primary AWS region where you run your Serverless API (e.g. us-east-2)"
   type        = string
